@@ -14,7 +14,7 @@ const Header = () => {
       <nav style={navigationStyle}>
         <a href="/">Home</a>
         <a href="/products">Products</a>
-        <a href="/login">Login</a>
+        <a href="/Login">Login</a>
       </nav>
     </header>
   );
