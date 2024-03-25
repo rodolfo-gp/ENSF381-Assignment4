@@ -43,3 +43,5 @@ const HomeMainSection = () => {
             ))}
         </div>
     );
+};
+export default HomeMainSection;
