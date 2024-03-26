@@ -5,7 +5,12 @@ import Cart from './Cart';
 import Footer from './Footer';
 
 const ProductPage = () => {
-  const [cartItems, setCartItems] = useState([]);
+
+  const [cartItems, setCartItems] = useState(() => {
+        const storedCartItems = JSON.parse(localStorage.getItem('cartItems'));
+        if(storedCartItems) return storedCartItems;
+        return []; //empty cart
+  });
 
   useEffect(() => {
     const storedCartItems = JSON.parse(localStorage.getItem('cartItems'));
@@ -29,7 +34,6 @@ const ProductPage = () => {
     }
   };
 
- // ProductPage.js (Updated removeFromCart function)
 const removeFromCart = (item) => {
     const existingItemIndex = cartItems.findIndex(cartItem => cartItem.id === item.id);
   
