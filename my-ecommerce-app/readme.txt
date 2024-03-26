@@ -1,5 +1,7 @@
 The process of importing necessary files and functions proceeded as follows:
 
+npm install, then: npm start   (must be in my-ecomerce-app directory)
+
 Initially, via the terminal, we installed the required packages by executing the commands:
 
 npm install react-scripts
